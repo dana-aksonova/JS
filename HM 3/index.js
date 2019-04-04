@@ -4,12 +4,13 @@ const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 const isLoginValid = function(login) {
   if( login.length >= 4 && login.length <=16){
     return true 
+    // alert ('GooD')
   }else
   // alert ('Ошибка! Логин должен быть от 4 до 16 символов')
 return false
   
 };
-isLoginValid('Ajax'); 
+// isLoginValid('Ajax'); 
 
 const isLoginUnique = function(logins, login) {
   if (logins.includes(login)){
@@ -17,13 +18,15 @@ const isLoginUnique = function(logins, login) {
     return false
   } else
   return true
+  // alert ('GooD')
 };
 
+// isLoginUnique ('Mango"'); 
 
 const addLogin = function(logins, login) {
   if (isLoginValid(login)){
       if (isLoginUnique(logins,login)){
-          loogins.push(login)
+          logins.push(login)
           console.log('Логин успешно добавлен!')
        } else{
           console.log('Такой логин уже используется')
