@@ -36,4 +36,4 @@ const addLogin = function(logins, login) {
    }
 
 };
-addLogin('Ajax'); // 'Логин успешно добавлен!'
+addLogin(logins,'Ajax'); // 'Логин успешно добавлен!'
