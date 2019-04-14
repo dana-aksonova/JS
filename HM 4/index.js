@@ -17,8 +17,7 @@ const products = {
       }
       this.countTotalPrice = function(order){
           const keys = Object.keys(order)
-          const price = keys.reduce(
-             (acc,val) => {
+          const price = keys.reduce( (acc,val) => {
                  return acc + order[val]* productDatabase[val]
              },0)
         this.totalPrice  = price;
