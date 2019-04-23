@@ -12,7 +12,7 @@ const products = {
       this.productDatabase = productDatabase;
       this.customerMoney = 0;
       this.totalPrice = 0;
-      this.getCustomerMoney = function(value){
+      this.setCustomerMoney = function(value){
           this.customerMoney = value
       }
       this.countTotalPrice = function(order){
@@ -24,12 +24,12 @@ const products = {
         return price;   
       }
       this.countChange = function(){
+         const diff = this.customerMoney -this.totalPrice;
           if (this.totalPrice>this.customerMoney){
               return null
-          }else{
-              return this.customerMoney -this.totalPrice;
-          }
+          }return diff
       }
+
       this.onSuccess =function(change){
           console.log(`Спасибо за покупку, ваша сдачв ${change}`);
       }
@@ -56,7 +56,7 @@ const order = {
   const totalPrice = mango.countTotalPrice(order);
   console.log(totalPrice); // 110
  
-  mango.getCustomerMoney(300);
+  mango.setCustomerMoney(300);
 
 // Проверяем что в поле с деньгами пользователя
 console.log(mango.customerMoney); // 300
