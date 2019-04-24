@@ -27,7 +27,8 @@ const products = {
          const diff = this.customerMoney -this.totalPrice;
           if (this.totalPrice>this.customerMoney){
               return null
-          }return diff
+          }else
+          return diff
       }
 
       this.onSuccess =function(change){
